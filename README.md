@@ -9,7 +9,7 @@
 
 **A next-generation URL shortener with stunning dark glassmorphism UI**
 
-[Features](#-features) • [Demo](#-live-demo) • [Installation](#-installation) • [Usage](#-usage) • [API](#-api-reference)
+[Features](#-features) • [Demo](https://url.ragilmalik.com) • [Installation](#-installation) • [Usage](#-usage) • [API](#-api-reference)
 
 ---
 
