@@ -67,6 +67,27 @@
                         <small class="form-help">Leave empty for random code. Use 3-20 alphanumeric characters.</small>
                     </div>
 
+                    <div class="form-group">
+                        <label for="codeLength" class="form-label">
+                            Short Code Length (for random codes)
+                        </label>
+                        <div class="length-selector">
+                            <label for="codeLength">Length:</label>
+                            <select id="codeLength" name="codeLength">
+                                <option value="5">5 characters</option>
+                                <option value="6" selected>6 characters (Default)</option>
+                                <option value="7">7 characters</option>
+                                <option value="8">8 characters</option>
+                                <option value="9">9 characters</option>
+                                <option value="10">10 characters</option>
+                                <option value="12">12 characters</option>
+                                <option value="15">15 characters</option>
+                                <option value="20">20 characters</option>
+                            </select>
+                        </div>
+                        <small class="form-help">Choose how many characters your random short code should have.</small>
+                    </div>
+
                     <button type="submit" class="btn btn-primary" id="shortenBtn">
                         <span class="btn-text">Shorten URL</span>
                         <span class="btn-loader" style="display: none;">

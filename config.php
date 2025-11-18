@@ -21,7 +21,9 @@ define('SITE_NAME', 'RagilMalik URL Shortener'); // Your site name
 define('ADMIN_PASSWORD', 'changeme123'); // Change this to a strong password for admin panel
 
 // URL Generation Settings
-define('SHORT_CODE_LENGTH', 6); // Length of generated short codes (6-10 recommended)
+define('SHORT_CODE_LENGTH', 6); // Default length of generated short codes
+define('MIN_CODE_LENGTH', 5);   // Minimum length for custom code generation
+define('MAX_CODE_LENGTH', 20);  // Maximum length for custom code generation
 
 // Analytics Settings
 define('TRACK_CLICKS', true); // Set to false to disable click tracking

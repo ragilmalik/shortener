@@ -7,6 +7,7 @@
 const shortenForm = document.getElementById('shortenForm');
 const originalUrlInput = document.getElementById('originalUrl');
 const customCodeInput = document.getElementById('customCode');
+const codeLengthSelect = document.getElementById('codeLength');
 const shortenBtn = document.getElementById('shortenBtn');
 const btnText = shortenBtn.querySelector('.btn-text');
 const btnLoader = shortenBtn.querySelector('.btn-loader');
@@ -93,6 +94,7 @@ shortenForm.addEventListener('submit', async (e) => {
 
     const originalUrl = originalUrlInput.value.trim();
     const customCode = customCodeInput.value.trim();
+    const codeLength = parseInt(codeLengthSelect.value);
 
     if (!originalUrl) {
         showAlert('Please enter a URL', 'error');
@@ -109,7 +111,8 @@ shortenForm.addEventListener('submit', async (e) => {
             },
             body: JSON.stringify({
                 url: originalUrl,
-                custom: customCode
+                custom: customCode,
+                length: codeLength
             })
         });
 
