@@ -1024,7 +1024,7 @@ copies of the Software...
 - 📖 **Documentation**: You're reading it!
 - 🐛 **Bug Reports**: [Open an issue](https://github.com/ragilmalik/shortener/issues)
 - 💡 **Feature Requests**: [Open an issue](https://github.com/ragilmalik/shortener/issues)
-- 📧 **Email**: your@email.com
+- 📧 **Email**: [Send Email](mailto:hello@ragilmalik.com)
 
 ### Hostinger Support
 - **Help Center**: https://support.hostinger.com
