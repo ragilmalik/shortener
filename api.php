@@ -96,6 +96,14 @@ function handleShorten($db) {
     $customCode = isset($input['custom']) ? trim($input['custom']) : '';
     $isCustom = !empty($customCode);
 
+    // Get desired length (for random codes)
+    $codeLength = isset($input['length']) ? intval($input['length']) : SHORT_CODE_LENGTH;
+
+    // Validate length
+    if ($codeLength < MIN_CODE_LENGTH || $codeLength > MAX_CODE_LENGTH) {
+        $codeLength = SHORT_CODE_LENGTH; // Fall back to default
+    }
+
     if ($isCustom) {
         // Validate custom code (alphanumeric, 3-20 chars)
         if (!preg_match('/^[a-zA-Z0-9]{3,20}$/', $customCode)) {
@@ -112,9 +120,9 @@ function handleShorten($db) {
 
         $shortCode = $customCode;
     } else {
-        // Generate unique random short code
+        // Generate unique random short code with specified length
         do {
-            $shortCode = generateShortCode();
+            $shortCode = generateShortCode($codeLength);
             $stmt = $db->prepare("SELECT id FROM urls WHERE short_code = ?");
             $stmt->execute([$shortCode]);
         } while ($stmt->fetch());
